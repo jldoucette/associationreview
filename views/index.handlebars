@@ -1,0 +1,45 @@
+
+      
+          <div id="blogpost">
+            <h2>Blog Posts</h2>
+            <ul>
+              {{#each Blog}}
+                
+                    <h2><strong>{{this.blogtitle}}</strong></h2>     <h4>Posted By: {{this.user}} At {{this.createdAt}}</h4>
+                    <p>{{this.blogpost}}</p>
+                    
+              {{/each}}
+            </ul>
+        </div>
+
+          <div id="addpost">
+                    <h2>Add To Blog</h2>
+                    <form class="create-update-form" action="/" method="POST">
+
+                      <div class="form-group">
+                        <label for="btitle">Blog Title</label>
+                        <input type="text" id="btitle" name="blogtitle">
+                         <label for="bpost">Blog Post</label>
+                        <input type="text" id="bpost" name="blogpost">
+                        <label for="buser">User</label>
+                        <input type="text" id="buser" name="user">
+                      </div>
+
+                      <button class="btn btn-default btn-large" type="submit">Post to Blog</button>
+                    </form>
+            </div>
+
+            <div id="classified">
+            <h2>Classified Advertising</h2>
+            <ul>
+              {{#each Classified}}
+                
+                    <h2><strong>{{this.itemtitle}}</strong></h2>     <h4>Posted By: {{this.user}} At {{this.createdAt}}</h4>
+                    <p>{{this.saleitem}}</p>
+                    <p>Price is: ${{this.price}}</p>
+                    <img src="http://jandmtravels.com/schoolimages/2.png" alt="{{this.itemtitle}}" width="400" height="200">
+                    
+              {{/each}}
+            </ul>
+        </div>
+      
